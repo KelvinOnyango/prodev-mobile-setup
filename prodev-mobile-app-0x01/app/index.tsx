@@ -1,10 +1,11 @@
+import React from "react";
 import { StyleSheet, View, Text } from "react-native";
 
-export default function App() {
+const App = () => {
   return (
     <View style={styles.container}>
-      <Text>Entry Screen - Awesome</Text>
-      <View>
+      <Text style={styles.entryText}>Entry Screen - Awesome</Text>
+      <View style={styles.textContainer}>
         <Text style={styles.largeText}>
           Typescript is great if you practice more
         </Text>
@@ -15,7 +16,7 @@ export default function App() {
       </View>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -24,6 +25,15 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "#90caf9",
     padding: 20,
+  },
+  textContainer: {
+    width: "100%",
+    marginTop: 20,
+  },
+  entryText: {
+    fontSize: 24,
+    marginBottom: 20,
+    fontWeight: "bold",
   },
   largeText: {
     fontSize: 30,
@@ -46,3 +56,5 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
 });
+
+export default App;
